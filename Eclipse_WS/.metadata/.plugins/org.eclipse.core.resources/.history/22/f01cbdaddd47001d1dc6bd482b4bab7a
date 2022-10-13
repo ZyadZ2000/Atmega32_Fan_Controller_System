@@ -1,0 +1,7 @@
+#include "gpio.h"
+#include "avr/io.h"
+#include "common_macros.h"
+
+void PWM_Timer0_Start(uint8 duty_cycle){
+
+}

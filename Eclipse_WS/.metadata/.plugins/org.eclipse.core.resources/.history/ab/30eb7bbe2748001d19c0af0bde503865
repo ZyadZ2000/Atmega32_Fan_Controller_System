@@ -1,0 +1,66 @@
+/*-------------------------------------------------------------------
+  [FILE NAME]: adc.h
+  [AUTHOR(S)]: Zyad Nezar
+  [DATE CREATED]: 9/10/2022
+  [DESCRIPTION]: Header file for ADC driver
+-------------------------------------------------------------------*/
+
+#ifndef ADC_H_
+#define ADC_H_
+
+/*----------------------------INCLUDES----------------------------*/
+
+#include "../std_types.h"
+
+/*----------------------------DEFINITIONS----------------------------*/
+
+#define ADC_MAXIMUM_VALUE    1023
+#define ADC_REF_VOLT_VALUE   2.56
+
+/*----------------------------ENUMS----------------------------*/
+
+typedef enum{
+	AREF,AVCC,_,INTERNAL
+}ADC_ReferenceVolatge;
+
+typedef enum{
+	DIV_FACTOR_2,
+	DIV_FACTOR_2_2,
+	DIV_FACTOR_4,
+	DIV_FACTOR_8,
+	DIV_FACTOR_16,
+	DIV_FACTOR_32,
+	DIV_FACTOR_64,
+	DIV_FACTOR_128
+}ADC_Prescaler;
+
+/*----------------------------STRUCTURES AND UNIONS----------------------------*/
+
+typedef struct{
+ ADC_ReferenceVolatge ref_volt;
+ ADC_Prescaler prescaler;
+}ADC_ConfigType;
+
+
+
+/*----------------------------FUNCTION DECLARATIONS----------------------------*/
+
+/*-------------------------------------------------------------------
+  [Function Name]: ADC_init
+  [Description]: Function responsible for initializing the ADC
+  [Args]: ADC_ConfigType* Config_Ptr:
+                pointer to the configurations structure of ADC
+  [DESCRIPTION]: void
+-------------------------------------------------------------------*/
+
+void ADC_init(const ADC_ConfigType* Config_Ptr);
+
+/*
+ * Description :
+ * Function responsible for read analog data from a certain ADC channel
+ * and convert it to digital using the ADC driver.
+ */
+
+uint16 ADC_readChannel(uint8 channel_num);
+
+#endif /* ADC_H_ */

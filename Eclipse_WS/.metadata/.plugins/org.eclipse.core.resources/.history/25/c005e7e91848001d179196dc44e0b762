@@ -1,0 +1,4 @@
+#include "MCAL/adc.h"
+#include "HAL/dc_motor.h"
+#include "HAL/lcd.h"
+#include "HAL/lm35_sensor.h"

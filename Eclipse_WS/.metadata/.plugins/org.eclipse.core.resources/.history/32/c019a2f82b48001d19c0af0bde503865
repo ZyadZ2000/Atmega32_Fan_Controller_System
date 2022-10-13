@@ -1,0 +1,46 @@
+/*-------------------------------------------------------------------
+ [FILE NAME]: dc_motor.h
+ [AUTHOR(S)]: Zyad Nezar
+ [DATE CREATED]: 9/10/2022
+ [DESCRIPTION]: Header file for DC MOTOR driver
+ -------------------------------------------------------------------*/
+
+#ifndef DC_MOTOR_H
+#define DC_MOTOR_H
+
+#include "../std_types.h"
+
+/*                Definitions                  */
+
+#define DC_MOTOR_PORT_ID  PORTB_ID
+#define DC_MOTOR_INPUT1_PIN_ID PIN0_ID
+#define DC_MOTOR_INPUT2_PIN_ID PIN1_ID
+
+
+/*                ENUMS                  */
+
+typedef enum{
+ STOPPED,A_CW,CW
+}DcMotor_State;
+
+
+
+/*                 Functions Prototypes                  */
+
+
+/*
+  Description :
+  Function responsible for initializing the DC MOTOR driver.
+ */
+
+void DcMotor_Init(void);
+
+/*
+  Description :
+  Function responsible for controlling the rotation direction and speed of the DC MOTOR
+ */
+
+void DcMotor_Rotate(DcMotor_State state,uint8 speed);
+
+
+#endif /* DC_MOTOR_H */

@@ -1,0 +1,51 @@
+ /******************************************************************************
+
+  Module: DC MOTOR
+
+  File Name: dc_motor.h
+
+  Description: header file for the ATmega16 DC MOTOR driver
+
+  Author: Zyad Nezar
+
+ *******************************************************************************/
+#ifndef DC_MOTOR_H
+#define DC_MOTOR_H
+
+#include "std_types.h"
+
+/*                Definitions                  */
+
+#define DC_MOTOR_PORT_ID  PORTB_ID
+#define DC_MOTOR_INPUT1_PIN_ID PIN0_ID
+#define DC_MOTOR_INPUT2_PIN_ID PIN1_ID
+#define DC_MOTOR_ENABLE1_PIN_ID PIN2_ID
+
+
+/*                ENUMS                  */
+
+typedef enum{
+
+}DcMotor_State;
+
+
+
+/*                 Functions Prototypes                  */
+
+
+/*
+  Description :
+  Function responsible for initializing the DC MOTOR driver.
+ */
+
+void DcMotor_Init(void);
+
+/*
+  Description :
+  Function responsible for controlling the rotation direction and speed of the DC MOTOR
+ */
+
+void DcMotor_Rotate(DcMotor_State state,uint8 speed);
+
+
+#endif /* DC_MOTOR_H */
