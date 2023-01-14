@@ -15,9 +15,10 @@ temperature value, the microcontroller will drive the fan like this:
     </ul>
       
       
-Implemented drivers are: GPIO, LCD, ADC, LM35 Sensor, DC Motor, and PWM
+# Implemented drivers are: GPIO, LCD, ADC, LM35 Sensor, DC Motor, and PWM
+
 <img src="https://user-images.githubusercontent.com/85132955/212487836-d5545469-8093-43f1-bc5e-f97fd1a7b6b4.png" style="display: block; width: 80%;">
       
-How to use:
+# How to use:
 
 Download the project along with the proteus simulation <a href="https://www.mediafire.com/file/e8kd5haw2nh52n1/Project-3.rar/file">Here</a>.
