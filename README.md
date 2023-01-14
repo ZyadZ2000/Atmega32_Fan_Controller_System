@@ -1,4 +1,4 @@
-# Atmega32_Fan_Controller_System
+# Atmega32_Fan_Controller_System 
 
 The Atmega32 microcontroller continuously monitors the temperature and based on the
 temperature value, the microcontroller will drive the fan like this:
